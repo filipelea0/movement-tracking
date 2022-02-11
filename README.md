@@ -1,3 +1,41 @@
+# FILIPE`S SUBMITION - REPO CHALLENGE  DSSIPD
+ 
+
+First, I was trying to run the python codes like it is presented on the GitHub repo (https://github.com/surya-veer/movement-tracking).
+However, I got an error message, and my camera did not pop up how it should be.
+
+Then, I started checking on the above-mentioned repo if someone faced this problem before, and I found the solution.
+
+
+In both moviment-v1.py (line 74) and moviment-v2.py (line 77), I changed the camera parameters, so the camera can capture the video and track my movements.
+
+*IN BOTH CASES I CHANGED THE FOLLOWING:*
+```bash
+# before changing
+video_capture = cv2.VideoCapture(-1)
+
+# after changing 
+video_capture = cv2.VideoCapture(0)
+
+```
+This simple change made the whole difference, because now the camera is tracking the movements very well.
+
+## OBERSERVATION
+
+By testing both moviment-v1.py and moviment-v2.py, I could notice that the version1 workes better. I could play few games using the moviment-v1.py, and the code response was quite satisfactory. I enjoyed it a lot.
+
+
+## CONCLUSION
+
+The code is working well and it is possible to use this simple code not only to play games with your camera but to control everything with is direction-based.
+
+Below you can check the original Readme text.
+Thanks!
+Filipe Leao
+
+-----
+
+
 # Realtime Face Movement Tracking ![](https://bit.ly/surya-veer-movement-tracking)
 90 Lines of code to convert your face movement into keyboard commands.
 
